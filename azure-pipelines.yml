@@ -5,7 +5,7 @@
 
 trigger:
 - main
-lockBehavior: sequential
+
 pool:
   vmImage: ubuntu-latest
 
@@ -21,3 +21,15 @@ jobs:
       echo See https://aka.ms/yaml
     displayName: 'Run a multi-line script'
 
+# Uncomment the following lines if you want to explicitly set parallel jobs.
+# - job: ParallelJob1
+#   displayName: 'Parallel Job 1'
+#   dependsOn: SingleJob
+#   steps:
+#   - script: echo This is a parallel job 1.
+
+# - job: ParallelJob2
+#   displayName: 'Parallel Job 2'
+#   dependsOn: SingleJob
+#   steps:
+#   - script: echo This is a parallel job 2.
