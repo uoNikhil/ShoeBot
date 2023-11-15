@@ -5,7 +5,7 @@
 
 trigger:
 - main
-
+lockBehavior: sequential
 pool:
   vmImage: ubuntu-latest
 
