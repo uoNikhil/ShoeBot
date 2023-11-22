@@ -1,0 +1,23 @@
+trigger:
+- main
+
+pool:
+  name: 'nikhil'
+
+steps:
+- task: KubernetesManifest@1
+  inputs:
+    action: 'deploy'
+    connectionType: 'kubernetesServiceConnection'
+    kubernetesServiceConnection: 'Dev-Devcluster-calico-system-1700618523959'
+
+- script: |
+    python -m pip install Flask
+    cd Backend
+    python app.py
+  displayName: 'Build and run app.py'
+
+- script: | 
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
