@@ -8,6 +8,7 @@ pool:
 steps:
 - script: |
     python -m pip install Flask
+    cd Backend
     python app.py
   displayName: 'Build and run app.py'
  
