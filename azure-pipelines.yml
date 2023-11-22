@@ -9,7 +9,7 @@ steps:
 - script: |
     cd Backend
     python -m pip install Flask
-    python app.py
+    python -m py_compile app.py
   displayName: 'Build and run app.py'
  
 - script: | 
