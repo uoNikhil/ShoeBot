@@ -7,7 +7,8 @@ pool:
 steps:
 - script: |
     cd Backend
-    python app.py
+    source BEvenv/bin/activate
+    python3 app.py
   displayName: 'Build and run app.py'
  
 - script: | 
