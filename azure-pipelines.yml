@@ -1,35 +1,16 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - main
-
+ 
 pool:
-  vmImage: ubuntu-latest
-
-jobs:
-- job: SingleJob
-  displayName: 'Single Queue Job'
-  steps:
-  - script: echo Hello, world!
-    displayName: 'Run a one-line script'
-
-  - script: |
-      echo Add other tasks to build, test, and deploy your project.
-      echo See https://aka.ms/yaml
-    displayName: 'Run a multi-line script'
-
-# Uncomment the following lines if you want to explicitly set parallel jobs.
-# - job: ParallelJob1
-#   displayName: 'Parallel Job 1'
-#   dependsOn: SingleJob
-#   steps:
-#   - script: echo This is a parallel job 1.
-
-# - job: ParallelJob2
-#   displayName: 'Parallel Job 2'
-#   dependsOn: SingleJob
-#   steps:
-#   - script: echo This is a parallel job 2.
+  name: 'nikhil'
+ 
+steps:
+- script: |
+    cd Backend
+    python app.py
+  displayName: 'Build and run app.py'
+ 
+- script: | 
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
